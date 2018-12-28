@@ -1,0 +1,52 @@
+﻿
+.wrapper {
+    margin-top: 25px;
+    color: black;
+    background-image: url(../Images/money1.gif);
+    background-size: cover;
+    width: 100%;
+    font-family: sans-serif;
+    margin: 0 auto;
+}
+.cardplace {
+    margin-top: 50px;
+}
+.card {
+    margin-top: 25px;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 70%;
+    font-family: sans-serif; 
+    margin: 0 auto;
+}
+
+/*.card-header {
+    clear: both;
+    display: block;
+    margin: 20px auto;
+    vertical-align: top;
+    background-color: hsla(120,100%,25%,0.6);
+    border-radius: 7px;
+    padding: 10px;
+    color: white !important;
+}
+.card-body {
+    clear: both;
+    display: block;
+    margin: 20px auto;
+    vertical-align: top;
+    background-color: hsla(120,100%,25%,0.6);
+    border-radius: 7px;
+    padding: 10px;
+    color: white !important;
+}
+.card-footer {
+    clear: both;
+    display: block;
+    margin: 20px auto;
+    vertical-align: top;
+    background-color: hsla(120,100%,25%,0.6);
+    border-radius: 7px;
+    padding: 10px;
+    color: white !important;
+}*/

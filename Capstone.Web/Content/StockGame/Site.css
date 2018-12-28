@@ -1,0 +1,101 @@
+﻿/* BEGIN COPIED OVER FROM VENDING MACHINE */
+.footer {
+    position: relative;
+    text-align: center;
+    background-image: linear-gradient(to right, black, lime) !important;
+    padding: 5px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    font-weight: bold;
+    font-size: small;
+    color: white;
+}
+
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -25px;
+}
+
+.push {
+    height: 50px;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Amiko';
+}
+
+html {
+    min-height: calc(100vh-60px);
+    height: 99%;
+    margin: 0;
+}
+
+.jumbotron {
+    background-image: linear-gradient(to right, black, lime);
+    background-position-y: 25%;
+    margin: 0 !important;
+    background-size: cover;
+    font-weight: bold;
+     /*min-height: 175px;
+     max-height: 175px;*/
+    color: white;
+}
+
+
+
+
+
+.navbar {
+    background-image: linear-gradient(to right, black, white) !important;
+    color: white !important;
+}
+
+.nav-link {
+    color: silver !important;
+}
+
+.active a {
+    color: white !important;
+}
+
+.VNDR {
+    color: white !important;
+}
+
+.jumboMove {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.motto {
+    margin-bottom: 0px !important;
+}
+
+/* END COPIED OVER FROM VENDING MACHINE */
+.arrow {
+    /*float: right;*/
+    background-position-y: 25%;
+    margin-top: 0;
+    margin-right: 0 !important;
+    background-size: cover;
+    font-weight: bold;
+    max-width : 300px;
+    min-height: 170px;
+    max-height: 175px;
+    width: 90%;
+    color: white;
+}
+
+h1{
+    margin-top:35px;
+}
+
+@media (max-width: 576px) {
+    .project-name, .subtitle {
+        display: none;
+    }
+}

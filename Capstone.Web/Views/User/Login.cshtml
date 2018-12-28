@@ -1,0 +1,40 @@
+﻿@section StyleSheet {
+    <link rel="stylesheet" href="~/Content/StockGame/Login.css" />
+}
+
+@section Scripts {
+    <script src="~/Scripts/StockGame/Login.js" defer></script>
+}
+
+@section Title {
+    Login
+}
+
+<div class="row loginHeader">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+
+        @using (Html.BeginForm("Login", "User", FormMethod.Post))
+        {
+            <div class="form-group">
+                @Html.Label("Username")
+                @Html.TextBox("Username", "", new { @class = "form-control", placeholder = "User Name" })
+                @Html.ValidationMessage("Username", new { @class = "error" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Password")
+                @Html.Password("Password", "", new { @class = "form-control", placeholder = "Password" })
+                @Html.ValidationMessage("Password", new { @class = "error" })
+
+            </div>
+            <div class="registerAccount">
+                @Html.ActionLink("Create new account", "Register", "User")
+            </div>
+            <button type="submit" class="btn btn-default">Login</button>
+            <div>
+                @Html.ValidationMessage("invalid-user", new { @class = "error" })
+            </div>
+        }
+    </div>
+    <div class="col-sm-4"></div>
+</div>

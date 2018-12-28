@@ -1,0 +1,42 @@
+﻿/*.debug{
+    border:1px solid black;
+}*/
+
+#playerStatusBar{
+    font-weight:bolder;
+}
+
+.top-row{
+    margin-top:40px;
+}
+
+ul{
+    list-style: none;
+    text-align:left;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+.modal-header > h5 {
+    font-weight:bolder;
+}
+
+.gain{
+    color: forestgreen;
+}
+.loss{
+    color: red;
+}
+
+@media (max-width: 576px) {
+    .exit-card {
+        margin-top: 40px;
+    }
+}
+
+a{
+    margin:5px;
+}

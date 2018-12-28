@@ -1,0 +1,34 @@
+﻿@section StyleSheet {
+    <link rel="stylesheet" href="~/Content/StockGame/Login.css" />
+}
+
+@section Scripts {
+
+}
+@section Title {
+    Settings
+}
+
+
+<div class="row loginHeader">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+
+        @using (Html.BeginForm("Settings", "StockGame", FormMethod.Post))
+        {
+            <div>
+                @Html.Label("Enter Time in Minutes")
+                @Html.TextBox("Timer", null, new { @class = "form-control", placeholder = "Minutes" })
+                @Html.ValidationMessage("Timer", new { @class = "error" })
+            </div>
+            <div>
+                @Html.Label("Enter the Available Shares")
+                @Html.TextBox("AvailableShares", null, new { @class = "form-control", placeholder = "Shares" })
+                @Html.ValidationMessage("AvailableShares", new { @class = "error" })
+            </div>
+            <button style="margin:20px">Submit</button>
+        }
+
+    </div>
+    <div class="col-sm-4"></div>
+</div>

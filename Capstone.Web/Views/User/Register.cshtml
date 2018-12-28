@@ -1,0 +1,58 @@
+﻿@model Capstone.RegisterViewModel
+
+@section StyleSheet {
+    <link rel="stylesheet" href="~/Content/StockGame/Login.css" />
+    <link rel="stylesheet" href="~/Content/StockGame/Register.css" />
+}
+
+@section Scripts {
+    <script src="~/Scripts/StockGame/Register.js" defer></script>
+}
+
+@section Title {
+    Register
+}
+
+<div class="row loginHeader">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+        @using (Html.BeginForm("Register", "User", FormMethod.Post))
+        {
+            <div class="form-group">
+                @Html.Label("FirstName")
+                @Html.TextBox("FirstName", "", new { @class = "form-control", placeholder = "First Name" })
+                @Html.ValidationMessage("FirstName", new { @class = "error" })
+            </div>
+            <div class="form-group">
+                @Html.Label("LastName")
+                @Html.TextBox("LastName", "", new { @class = "form-control", placeholder = "Last Name" })
+                @Html.ValidationMessage("LastName", new { @class = "error" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Email")
+                @Html.TextBox("Email", "", new { @class = "form-control", placeholder = "Email" })
+                @Html.ValidationMessage("Email", new { @class = "error" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Username")
+                @Html.TextBox("Username", "", new { @class = "form-control", placeholder = "User Name" })
+                @Html.ValidationMessage("Username", new { @class = "error" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Password")
+                @Html.Password("Password", "", new { @class = "form-control", placeholder = "Password" })
+                @Html.ValidationMessage("Password", new { @class = "error" })
+            </div>
+            <div class="form-group">
+                @Html.Label("ConfirmPassword")
+                @Html.Password("ConfirmPassword", "", new { @class = "form-control", placeholder = "Re-type Password" })
+                @Html.ValidationMessage("ConfirmPassword", new { @class = "error" })
+            </div>
+            <button type="submit" class="btn btn-default">Register</button>
+            <div>
+                @Html.ValidationMessage("invalid-user", new { @class = "error" })
+            </div>
+        }
+    </div>
+    <div class="col-sm-4"></div>
+</div>

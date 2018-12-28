@@ -1,0 +1,91 @@
+﻿@section StyleSheet {
+    <link rel="stylesheet" href="~/Content/StockGame/Game.css" />
+}
+
+@section Scripts {
+    <script src="~/Scripts/StockGame/Game.js" defer></script>
+    <script src="~/Scripts/StockGame/ExitGame.js" defer></script>
+    <script src="~/Scripts/StockGame/Timer.js" defer></script>
+}
+
+@section Title {
+    Game
+}
+@model Capstone.UserItem
+
+
+
+<div data-player="@Model.Id" id="PlayerUsername" class="container-fluid debug game-container">
+
+    <div class="container debug">
+        <div class="row top-row debug">
+            <div class="col-md-9 debug table-responsive test">
+                <table class="table table-striped table-sm table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col" width="75px">Rank</th>
+                            <th scope="col">Player</th>
+                            <th scope="col">Owned</th>
+                            <th scope="col">StockWorth</th>
+                            <th scope="col">Cash</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody class="leaderboardBody"></tbody>
+                </table>
+            </div>
+            <div class="col-md-3 debug">
+                <div class="card exit-card text-center shadow p-3 mb-5 bg-white rounded justify-content-center align-items-center">
+                    <div class="card-body">
+                        <h5 class="card-title" id="portfolioValue">Current: $134,089</h5>
+                        <p id="demo"></p>
+                        <a id="exit" href="~/StockGame/Results" class="btn btn-danger">EXIT GAME</a>
+                        <a id="end" href="~/StockGame/EndGameResults" class="btn btn-danger">END GAME</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row debug">
+            <div class="col-lg debug table-responsive-lg">
+                <table class="table table-striped table-hover table-sm table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col" width="75px">SYM</th>
+                            <th scope="col" width="125px">CUR</th>
+                            <th scope="col">OWNER</th>
+                            <th scope="col">AVG</th>
+                            <th scope="col">G/L</th>
+                            <th scope="col" width="75px">AMT</th>
+                            <th scope="col" width="75px">AVAIL</th>
+                            <th scope="col" width="75px">BUY</th>
+                            <th scope="col" width="75px">SELL</th>
+                            <th scope="col" width="75px">SHARES</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stockTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-list"></ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

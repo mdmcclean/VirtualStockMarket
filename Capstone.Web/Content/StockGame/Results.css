@@ -1,0 +1,19 @@
+﻿.results-container{
+    border:20px solid black;
+}
+
+h1{
+    text-align:center;
+    font-weight:bold;
+    margin:0px;
+}
+
+.new-game-button, .winner-row {
+    background-color:green !important;
+    color: white;
+}
+
+.new-game-button{
+    margin-top:20px;
+    margin-bottom: 20px;
+}
